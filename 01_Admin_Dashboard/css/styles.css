@@ -1,0 +1,35 @@
+    body{
+    font-family: "Helvetica Neue",sans-serif;
+	font-size: 18px;
+}
+.header{
+      font-weight: bold;
+    background:linear-gradient(45deg,black,darkslategray);
+}
+.dltacount{background:linear-gradient(45deg,black,red);}
+.updteacc{background:linear-gradient(45deg,black,wheat);}
+.editbtn{background:linear-gradient(45deg,black,orange);}
+.dashboard{
+    background:linear-gradient(45deg,darkslategray,black);
+       }
+.btn1{background:linear-gradient(45deg,red,black);}
+.btn2{background:linear-gradient(45deg,orange,black);}
+.btn3{background:linear-gradient(45deg,green,black);}
+.modal1{background:linear-gradient(45deg,red,black);}
+.modal2{background:linear-gradient(45deg,orange,black);}
+.modal3{background:linear-gradient(45deg,green,black);}
+
+.mainbox{background: linear-gradient(45deg,black,#00b3ee);}
+.dropdown-item{background: #5e5e5e; border-radius:5px;}
+    .font{font-family: "bold";}
+.dropdown-item:hover{
+    background:linear-gradient(45deg,teal,lightslategrey);
+     color: white !important; box-shadow: 0 0 5px black;}
+    .bg-light-blue{background-color: lightblue;}
+    .btn-warning ,.bg-warning{background: linear-gradient(45deg,black,coral);}
+    .bg-default,.btn-default{background: linear-gradient(45deg,black,lightcyan); }
+    .table1{ box-shadow: 0 0 10px lightgrey;}
+.card1{ background:linear-gradient(45deg,blueviolet,black);}
+.card2{ background:linear-gradient(45deg,green,black);}
+.card3{ background:linear-gradient(55deg,#5bc0de,black);}
+.footer{background: linear-gradient(55deg,black,teal);}

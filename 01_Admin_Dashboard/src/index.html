@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>CodersWord Dashboard</title>
+</head>
+<body>
+    <!--Main Navbar-->
+
+    <nav class="navbar navbar-dark header bg-dark navbar-expand-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand text-warning">
+                <i class="fa fa-snowflake"></i>CodersWord</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#uiNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="uiNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa fa-chart-bar text-muted"></i>DashBoared</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tasks.html" class="nav-link">
+                            <i class="fa fa-list text-muted"></i>Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categories.html" class="nav-link">
+                            <i class="fa fa-users text-muted"></i>categories</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="employees.html" class="nav-link">
+                            <i class="fa fa-users text-muted"></i>Employees</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto dropdown">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <i class="fa fa-sign-in-alt text-muted"></i>Ganesh
+                            <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-menu p-2">
+                            <a href="profile.html" class="dropdown-item text-white">
+                                <i class="fa fa-user-circle text-black-50"></i>Profile</a>
+                            <a href="settings.html" class="dropdown-item text-white">
+                                <i class="fa fa-cogs"></i>Settings</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <i class="fa fa-sign-out-alt text-muted"></i>LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Dashboard Section-->
+
+       <section class="p-2 dashboard text-white-50">
+           <div class="container">
+               <div class="row">
+                   <div class="col animated flip">
+                       <h1><i class="fa fa-chart-bar"></i>Dashboard</h1>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+    <!--Button Section-->
+    <section class="p-3  bg-light">
+        <div class="container">
+            <div class="row animated flipInX">
+
+                <div class="col-md-4 ">
+                    <a href="#" class="btn btn-danger btn-block btn1 " data-toggle="modal" data-target="#task-modal">
+                        <i class="fa fa-plus-circle"></i>Add Tasks</a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-warning btn-block btn2" data-toggle="modal" data-target="#categories-modal">
+                        <i class="fa fa-plus-circle"></i>Add Categories</a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-success btn-block btn3" data-toggle="modal" data-target="#employees-modal">
+                        <i class="fa fa-plus-circle"></i>Add Employees</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Task Modal-->
+
+    <div class="modal" id="task-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated jackInTheBox">
+                <div class="modal-header bg-danger text-white modal1">
+                    <h3>Add Tasks</h3>
+                     <button class="close" data-dismiss="modal">
+                         <i class="fa fa-times-circle"></i>
+                     </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <lable>Categories</lable>
+                             <select class="form-control">
+                                 <option>Devlopment</option>
+                                 <option>Maintenance</option>
+                                 <option>Enhancement</option>
+                                 <option>Bug Fixing</option>
+                                 <option>Production Support</option>
+                                 <option>Client Meetting</option>
+                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Image Upload</label>
+                            <input type="file" class="form-control-file">
+                            <small>Max size 3 MB</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="editor1" rows="4" class="form-control"></textarea>
+                        </div>
+                        <a href="#" class="btn btn-outline-teal" data-dismiss="modal">Close</a>
+                        <input type="Submit" value="Submit" class="btn btn-outline-danger">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Category Modal-->
+
+    <div class="modal" id="categories-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header bg-warning text-white modal2">
+                    <h3>Add Categories</h3>
+                    <button class="close" data-dismiss="modal">
+                         <i class="fa fa-times-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Category Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control">
+                        </div>
+                        <a href="#" class="btn btn-outline-dark" data-dismiss="modal">Close</a>
+                        <input type="submit" value="Add Category" class="btn btn-outline-warning">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Empolyee Modal-->
+    <div class="modal" id="employee-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header bg-warning text-white modal3">
+                    <h3>Add Employees</h3>
+                    <button class="close" data-dismiss="modal">
+                        <i class="fa fa-times-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Employee Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Employee Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Default Password">
+                        </div>
+                        <a href="#" class="btn btn-dark" data-dismiss="modal">Close</a>
+                        <input type="submit" value="Add Employee" class="btn btn-warning">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Main Content Section-->
+
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card animated jello">
+                        <div class="card-header bg-info text-white mainbox">
+                            <h2>Current Tasks</h2>
+                        </div>
+                        <div class="card-body bg-light">
+                            <table class="table table-hover">
+                                <thead class="bg-dark text-white">
+                                <tr>
+                                    <th>SNO</th>
+                                    <th>EMPLOYEE</th>
+                                    <th>EMAIL</th>
+                                    <th>TASK NAME</th>
+                                    <th>LEVEL</th>
+                                    <th>CATEGORY</th>
+                                    <th>DETAILS</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="table table-striped">
+                                    <td>1</td>
+                                    <td>Ganesh</td>
+                                    <td>Ganesh@tcs.com</td>
+                                    <td>UI Design Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                        <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Chitan</td>
+                                    <td>Chitan@infosys.com</td>
+                                    <td>FullStack Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Akshay</td>
+                                    <td>Akshay@persistence.com</td>
+                                    <td>Angular Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Paddy</td>
+                                    <td>Paddy@cognizent.com</td>
+                                    <td>Python Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>Yuvraj</td>
+                                    <td>Yuvraj@tcs.com</td>
+                                    <td>AI Devloper Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>Akash</td>
+                                    <td>Akash@eald.com</td>
+                                    <td>FullStack Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Akshay</td>
+                                    <td>Akshay@oracle.com</td>
+                                    <td>Java Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>Atul</td>
+                                    <td>Atul@cognizent.com</td>
+                                    <td>Python Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>9</td>
+                                    <td>Nikhil</td>
+                                    <td>Nikhil@maruti.com</td>
+                                    <td>Car Design Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>10</td>
+                                    <td>Ankita</td>
+                                    <td>Ankita@cognizent.com</td>
+                                    <td>FullStack Module Emails</td>
+                                    <td>Medium</td>
+                                    <td>Devlopment</td>
+                                    <td>
+                                        <a href="#" class="btn btn-outline-secondary btn-sm">Details
+                                            <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center animated zoomIn">
+                        <div class="card-header bg-secondary text-white card1">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <i class="fa fa-list fa-4x"></i>
+                                </div>
+                                <div class="col">
+                                    <h3 class="display-3">08</h3>
+                                    <h6>Tasks</h6>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="card-footer">
+                             <h5>
+                                 <a href="tasks.html" class="text-secondary">
+                                     View Details<i class="fa fa-arrow-alt-circle-right"></i>
+                                 </a>
+                             </h5>
+                         </div>
+                    </div>
+                    <div class="card text-center mt-4 animated zoomIn">
+                        <div class="card-header bg-success text-white card2">
+                            <div class="row align-items-lg-baseline">
+                                <div class="col">
+                                    <i class="fa fa-sitemap fa-4x"></i>
+                                </div>
+                                <div class="col">
+                                    <h3 class="display-3">06</h3>
+                                    <h6>Categories</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h5>
+                                <a href="categories.html" class="text-success">
+                                 view Details<i class="fa fa-arrow-alt-circle-right"></i>
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="card text-center mt-4 animated zoomIn">
+                        <div class="card-header bg-info text-white card3">
+                            <div class="row align-items-lg-baseline">
+                                <div class="col">
+                                    <i class="fa fa-user fa-4x"></i>
+                                </div>
+                                <div class="col">
+                                    <h3 class="display-3">08</h3>
+                                    <h6>Employees</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h5>
+                                <a href="employees.html" class="text-info">
+                                  View Details<i class="fa fa-arrow-alt-circle-right"></i>
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Main Footer-->
+
+    <footer class="p-3 bg-dark text-white text-center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Copyright &copy; 2019 , CodersWords.com</h3>
+                    <h6>All Right Reserved</h6>
+                    <h6>Devloped & Maintained by
+                    <a class="text-warning" href="https://github.com/ganeshdehadray" target="_blank">
+                        <i class="fa fa-users"></i> CodersWords.com</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- BODY ENDS -->
+<script src="../../bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="../../bootstrap/js/popper.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../bootstrap/js/mdb.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>
